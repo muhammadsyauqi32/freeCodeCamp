@@ -11,26 +11,32 @@
     <!-- Form -->
     <div class="form">
       <form action="" id="survey-form">
-        <label for="name">Name</label>
+        <!-- Name -->
+        <label for="name" id="name-label">Name</label>
         <input
           type="text"
           name="name"
-          id="name-label"
+          id="name"
           placeholder="Enter your name"
+          required
         /><br />
-        <label for="email">Email</label>
+
+        <!-- Email -->
+        <label for="email" id="email-label">Email</label>
         <input
           type="email"
           name="email"
-          id="email-label"
+          id="email"
           required
           placeholder="Enter your Email"
         /><br />
-        <label for="number">Age (Optional)</label>
+
+        <!-- Number -->
+        <label for="number" id="number-label">Age (Optional)</label>
         <input
           type="number"
           name="number"
-          id="number-label"
+          id="number"
           min="1"
           max="100"
           placeholder="Age"
@@ -38,11 +44,58 @@
         <label for="option"
           >Which option best describes your current role?</label
         >
+        <!-- Dropdown -->
         <select name="dropdown" id="dropdown">
-          <option value="default" selected>Select</option>
+          <option value="default" selected disabled>Select</option>
           <option value="hai">Hai</option>
-          <option value="yow">Yow</option>
-        </select>
+          <option value="yow">Yow</option></select
+        ><br />
+
+        <!-- Radio -->
+        <p id="description">Would you recommend freeCodeCamp to a friend?</p>
+        <label><input type="radio" name="opsi" value="yes" />Yes</label><br />
+        <label><input type="radio" name="opsi" value="no" />No</label><br />
+
+        <!-- Dropdown 2 -->
+        <p id="description">What is your favorite feature of freeCodeCamp?</p>
+        <select name="dropdown" id="dropdown">
+          <option value="default" selected disabled>Select</option>
+          <option value="hai">Hai</option>
+          <option value="yow">Yow</option></select
+        ><br />
+
+        <!-- Checkbox -->
+        <p>What would you like to see improved? (Check all that apply)</p>
+        <label
+          ><input
+            type="checkbox"
+            name="check"
+            id="check"
+            value="front"
+          />Front-end Projects</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="check"
+            id="check"
+            value="back"
+          />Back-end Projects</label
+        >
+        <label
+          ><input
+            type="checkbox"
+            name="check"
+            id="check"
+            value="back"
+          />Wide-end Projects</label
+        >
+
+        <!-- Text Area -->
+        <p>Any comments?</p>
+        <textarea name="comment" id="comment">Enter your comment</textarea>
+
+        <button type="submit" id="submit">Submit</button>
       </form>
     </div>
   </body>
